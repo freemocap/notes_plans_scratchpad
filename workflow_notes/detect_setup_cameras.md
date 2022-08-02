@@ -1,0 +1,30 @@
+# **DETECT/SETUP CAMERAS**
+
+- The 'detect cameras' button is automatically pressed and then changes to 're-detect cameras', and some kind of progress info tells the User that the system is attempting to connect to all the USB cameras it can find
+    -  under the hood, it's running the `detect_available_cameras` behavior, which tries to initialize a `cv2.VideoCapture(port_number:int)` object for `port_number` = 1:20
+    - Needs to be robust against finding 'Virtual Cameras' like the one that OBS installs onto Windows machines
+    - Once cameras are detected, they arrange themselves into grid in the **middle panel** of the window
+    - User then has ability to:
+        - Checkbox - select/deselect a camera from being used 
+            - default: Checked
+        - Change camera capture paramters
+            - **image resolution**
+                -    `video_capture_object.set(cv2.CAP_PROP_HEIGHT)` & `video_capture_object.set(cv2.CAP_PROP_WIDTH)`
+                - Width/height drawn from available options (e.g. standard 16:9 resolutions)
+                            - default: 1280x720
+                    - **Exposure:**
+                        - `video_capture_object.set(cv2.CAP_PROP_EXPOSURE)`
+                        - [technical info here](https://www.kurokesu.com/main/2020/05/22/uvc-camera-exposure-timing-in-opencv/)
+                        - default: `-6`
+                    - **Rotate**:
+                        - Need rotate images before saving them to video, so that the human is upright in the image
+                        - use image = cv2.rotate(image, ROTATION_CODE)
+                        - see [cv docs](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga4ad01c0978b0ce64baa246811deeac24)
+                        - default: 'None'
+                    - Maybe also- 
+                        - Tint
+                        - Saturation
+                        - Other stuff? 
+                - Option to **Apply Changes** which re-attaches to cameras with new settings applied 
+                    - may not be necessary for all settings, but at least some of them will require a new instance of `cv2.VideoCapture`
+        - 

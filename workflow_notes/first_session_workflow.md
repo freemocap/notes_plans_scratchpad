@@ -43,8 +43,8 @@
             - left column - Information and buttons for controlling stuff
             - middle panel - place for video stream previews and 3D viewer
             - Right panel - iPython console
-        - [**DETECT/SETUP CAMERAS**](/FQ3NEfdUQ06jyl8J5ocGPA)
-        - [**CALIBRATE CAPTURE VOLUME**](/4KE_-oXvQguwAlOeZWwKuw)
-        - [**RECORD NEW MOTION CAPTURE SESSION**](/QL6TBfapTZq8cwKNElkfMA)
-        - [**VIEW MOTION CAPTURE SESSION**](/MfpVGoi7QP2tmcjtFzTkRQ)
-        - [**OPEN IN BLENDER**](/gh15AplQTWqISuSsC2Qlpg)
+        - [**DETECT/SETUP CAMERAS**](detect_setup_cameras.md)
+        - [**CALIBRATE CAPTURE VOLUME**](calibrate_capture_volume.md)
+        - [**RECORD NEW MOTION CAPTURE SESSION**](record_new_motion_capture_session.md)
+        - [**VIEW MOTION CAPTURE SESSION**](view_motion_capture_session.md)
+        - [**OPEN IN BLENDER**](open_in_blender.md)
