@@ -1,5 +1,8 @@
 # First Session Workflow
 
+[![hackmd-github-sync-badge](https://hackmd.io/ARRw5t0bS8WcYqgRhHT_jQ/badge)](https://hackmd.io/ARRw5t0bS8WcYqgRhHT_jQ)
+
+
 - Install `freemocap`
 - Attach webcams to your computer
     - Preferably, directly into a USB port
@@ -40,7 +43,8 @@
             - left column - Information and buttons for controlling stuff
             - middle panel - place for video stream previews and 3D viewer
             - Right panel - iPython console
-        - The 'detect cameras' button is automatically pressed and then changes to 're-detect cameras', and some kind of progress info tells the User that the system is attempting to connect to all the USB cameras it can find
-            - under the hood, it's running the `detect_available_cameras` behavior, which tries to initialize a `cv2.VideoCapture(port_number:int)` object for `port_number` = 1:20
-            - Needs to be robust against finding 'Virtual Cameras' like the one that OBS installs onto Windows machines
-        - Once cameras are detected, they arrange themselves into grid in the middle panel of the window ()
+        - [**DETECT/SETUP CAMERAS**](/FQ3NEfdUQ06jyl8J5ocGPA)
+        - [**CALIBRATE CAPTURE VOLUME**](/4KE_-oXvQguwAlOeZWwKuw)
+        - [**RECORD NEW MOTION CAPTURE SESSION**](/QL6TBfapTZq8cwKNElkfMA)
+        - [**VIEW MOTION CAPTURE SESSION**](/MfpVGoi7QP2tmcjtFzTkRQ)
+        - [**OPEN IN BLENDER**](/gh15AplQTWqISuSsC2Qlpg)
