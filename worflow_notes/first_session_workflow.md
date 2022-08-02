@@ -1,0 +1,46 @@
+# First Session Workflow
+
+- Install `freemocap`
+- Attach webcams to your computer
+    - Preferably, directly into a USB port
+    - USB Hubs are less reliable. Sometimes you can get 2 cameras running through a single hub, but often the camera feed will die. 
+- Come up with a plan to mount your cameras to point at your desired `capture volume`
+    - **Capture Volume** - the 3D space in which there is sufficient camera coverage to support tracking the subject in 3d. Typically, an area where there are overlapping fields of view from at least 2 (preferably 3) cameras
+    - The simplest method is to orient the cameras so that you maximize the overlap of their fields of view on top of the area you are trying to capture
+    - I have had the best luck using 3-5 cameras
+    - In theory, we could cover larger spaces using larger numbers of cameras, but I have less experience with that
+    
+- Run `freemocap`
+    - **A screen pops up that says 'Welcome to FreeMoCap' and there is a picture of Skelly**
+        - Let's say there are a number of buttons each representing a potential workflow, e.g.:
+            - First FreeMoCap Session
+            - Calibrate Capture Volume
+            - Record new motion capture session
+            - Reprocess previous motion capture session
+            - Load external videos (e.g. GoPro's)
+            - Post process or view previous motion capture session
+        - Select "First FreeMoCap Session"
+    - **Progress to a screen that requests a `session_id` for this sesssion, with a big friendly button that says 'Continue' or something:**
+        - default is `session_YYYY-MM-DD_HH_MM_SS`
+        - `session_id` cannot be changed, but user can add a tag to the end of it, e.g. `session_2022-08-02_06_35_12_first_session`
+            - No Spaces allowed in the `session_id`
+        - Maybe an option to auto-increment, i.e. add a `_000` to the end of the `session_id` and then bump it up to `_001` for the next recoring
+        - Maybe also a place for 'metadata' about the session, including
+            - Subject_id (who is being record)
+            - Maybe option to add new fields to the `metadata` with 'dictionary-like' format
+            - Place for Notes and comments
+            - This info will be saved to the `session_folder`
+        - Once the User clicks 'continue':
+            - A new `session_folder` is created at:
+                - `[freemocap_data_folder]/[session_id]`
+                - `freemocap_data_folder` - default location is User folder
+                - The `session_folder` is empty, but for a `session_metadata.toml` file that contains info about the session
+    - **Progress to 'Main Window'**
+        - Main Window layout
+            - left column - Information and buttons for controlling stuff
+            - middle panel - place for video stream previews and 3D viewer
+            - Right panel - iPython console
+        - The 'detect cameras' button is automatically pressed and then changes to 're-detect cameras', and some kind of progress info tells the User that the system is attempting to connect to all the USB cameras it can find
+            - under the hood, it's running the `detect_available_cameras` behavior, which tries to initialize a `cv2.VideoCapture(port_number:int)` object for `port_number` = 1:20
+            - Needs to be robust against finding 'Virtual Cameras' like the one that OBS installs onto Windows machines
+        - Once cameras are detected, they arrange themselves into grid in the middle panel of the window ()
