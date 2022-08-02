@@ -1,0 +1,4 @@
+numpy
+pyqtgraph
+qtconsole
+pyqt6
