@@ -4,10 +4,12 @@ This is the standard freemocap workflow - If a user did this workflow the first 
 
 
 (PHYSICAL TASKS) 
+
 [SET UP PHYSICAL CAMERAS](sub-workflows/set_up_physical_cameras.md)
 
 
 (FREEMOCAP TASKS)
+
 - Install `freemocap`
 - Run `freemocap`
 - [WELCOME SCREEN](sub-workflows/welcome_screen.md)
