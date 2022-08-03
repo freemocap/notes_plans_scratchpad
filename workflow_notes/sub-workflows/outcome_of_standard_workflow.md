@@ -1,0 +1,37 @@
+# Outcome of Standard Workflow
+ 
+ A `session_folder` named `session_id` located at `[system_user_folder]/freemocap_data/[session_id]` that contains:
+- `calibration_data`(folder)
+	- NOTE - maybe this should be kept separate from the `[session_folder]`?
+	- `calibration_videos` (folder)
+		- Contains synchronized videos from [calibrate_capture_volume](calibrate_capture_volume.md)
+		- maybe subfolders with `raw` videos and `annotated` videos?
+	- `[session_id]_camera_calibration.toml`
+		- camera/capture volume calibration data from `anipose` calculation
+	- `charuco_2d` - 
+		- `npy` and `csv` files containing `charuco` data from each recordings
+	- `logs`
+		- Log files containing output from `anipose` calibration process
+- `synchronized_videos`(folder)
+	- synchronized videos from each camera
+		- videos are 'frame perfect,' i.e. they have precisely the same number of frames, and each frame is synchronized so that (say) frame#153 from Camera0 corresponds to the same moment in time as frame#153 from Camera2
+			- For now, let's say they are 'synchronized' if the are less than 1 `frame_duration` apart (so for 30fps videos, frame should be +/- 33ms)
+	- timestamp data from each camera
+		- in `npy` format
+		- in `csv` format (via `pandas.DataFrame.to_csv`)
+- `annotated_videos`(folder)
+	- same as `synchronized_videos`, except:
+		- the videos have the `mediapipe_2d` data drawn on top of it (i.e. draw skeletons on the people)
+		- Maybe also draw `charuco` data?
+		- No timestamp data
+- `output_data` (folder)
+	- `Medipipe_2d` data
+		- as `npy` and `csv` and `pickle` (pickle contains all the `mediapipe_results` objects?)
+	- `Mediapipe_3d` data
+		- as `npy`
+			- `body`, `right_hand`, `left_hand`, `face` data saved separately
+			- 3d XYZ data  AND 'reprojection error' data (same structure)
+		- as `csv`
+			- via `pandas.DataFrame.to_csv`
+	- `[session_id].blend` Blender file
+	- Any other optional outputs (see [open_in_blender](open_in_blender.md))

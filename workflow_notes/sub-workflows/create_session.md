@@ -1,0 +1,17 @@
+# Create Session
+- **Progress to a screen that requests a `session_id` for this sesssion, with a big friendly button that says 'Continue' or something:**
+	- default is `session_YYYY-MM-DD_HH_MM_SS`
+	- `session_id` cannot be changed, but user can add a tag to the end of it, e.g. `session_2022-08-02_06_35_12_first_session`
+		- No Spaces allowed in the `session_id`
+	- Maybe a **auto-increment feature**, i.e. add a `_000` to the end of the `session_id` and then bump it up to `_001` for the next recoring
+	- Maybe also a place for **User to input 'metadata'** about the session, including
+		- Subject_id (who is being record)
+		- Maybe option to add new fields to the `metadata` with 'dictionary-like' format
+		- Place for Notes and comments
+		- This info will be saved to the `session_folder`
+	- Once the User clicks 'continue':
+		- A new `session_folder` is created at:
+			- `[freemocap_data_folder]`/`[session_id]`
+			- `freemocap_data_folder` - default location is User folder
+			- On creation, `session_folder` only contains a `session_metadata.toml` file that contains info about the session
+		- Proceed to [MAIN WORKING WINDOW](main_working_window.md)

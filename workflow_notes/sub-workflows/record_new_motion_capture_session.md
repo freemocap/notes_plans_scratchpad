@@ -1,0 +1,26 @@
+# Record New Motion Capture Session
+
+- Options - 
+	- maybe option to display `mediapipe` skeletons on images? 
+	- maybe option to auto-stop after certain amount of time?
+	- option to add meta data (again)
+	- option to select calibration data? 
+		- or just a checkbox for 'use previous calibration'
+	- option to calibrate from recorded video 
+			- Subject must show `charuco_board` in video
+			- Once videos are recorded, they can be sent to the same calibration pipeline described in [**CALIBRATE CAPTURE VOLUME**](calibrate_capture_volume.md)
+			- 
+- Basically just a big "RECORD" button
+	- User clicks it and the subject does something mocappable in front of the cameras
+	- when RECORD is done:
+		- Videos are saved to `synchronized_videos` folder in `session_folder`
+			- confirm that videos are synchronized, with precisely the same number of frames 
+			- save out `timestamp` in both `npy` and `pandas.DataFrame` (`.csv`) format
+		- Process each video with `mediapipe` and save out:
+			- `mediapipe_2d` data (as `npy` and `dataframe`)
+				- save `body`, `right_hand`, `left_hand`, and `face` data separately
+			- videos with `mediapipe_2d` data drawn on top to `annotated_videos` folder
+		- use `anipose` to combine `calibration_data`   with `mediapipe_2d` to get `mediapipe_3d` skeletons!
+			- For now, quick and dirty - use `mediapipe`'s 'visibility' value to exclude 'low quality' tracks from triangulation
+			- later (soon!) - use `reprojection_error` to exclude data from camera views that make the overall quality of the calibration worse
+				- NOTE - this will likely be slower by a factor that grows with the number of cameras (because we'll need to test every combination of 2 or 3 cameras)
