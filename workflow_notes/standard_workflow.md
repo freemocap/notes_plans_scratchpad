@@ -1,11 +1,9 @@
 # Standard Workflow
 
-[![hackmd-github-sync-badge](https://hackmd.io/ARRw5t0bS8WcYqgRhHT_jQ/badge)](https://hackmd.io/ARRw5t0bS8WcYqgRhHT_jQ)
-
 This is the standard freemocap workflow - If a user did this workflow the first time they opened freemocap, it would result in this [[OUT COME OF THE STANDARD WORKFLOW]] 
 
 
-(PHYSICAL TASKS)
+(PHYSICAL TASKS) 
 [SET UP PHYSICAL CAMERAS](set_up_physical_cameras.md)
 
 
