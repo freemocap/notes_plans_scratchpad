@@ -14,4 +14,4 @@
 			- `[freemocap_data_folder]`/`[session_id]`
 			- `freemocap_data_folder` - default location is User folder
 			- On creation, `session_folder` only contains a `session_metadata.toml` file that contains info about the session
-		- Proceed to [MAIN WORKING WINDOW](main_working_window.md)
+		- Proceed to [MAIN WORKING WINDOW](workflow_notes/sub-workflows/main_working_window_layout.md)

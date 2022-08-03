@@ -1,6 +1,6 @@
 # Standard Workflow
 
-This is the standard freemocap workflow - If a user did this workflow the first time they opened freemocap, it would result in this [[OUT COME OF THE STANDARD WORKFLOW]] 
+This is the standard freemocap workflow - If a user did this workflow the first time they opened freemocap, it would result in this - [outcome_of_standard_workflow](sub-workflows/outcome_of_standard_workflow.md)
 
 
 (PHYSICAL TASKS) 
