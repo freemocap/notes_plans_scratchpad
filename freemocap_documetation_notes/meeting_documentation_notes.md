@@ -1,6 +1,9 @@
 # Notes for FreeMoCap documentation
 
-[![hackmd-github-sync-badge](https://hackmd.io/wY3Bb7iYQMemqIBXKzPGew/badge)](https://hackmd.io/wY3Bb7iYQMemqIBXKzPGew)
+[![hackmd-github-sync-badge](https://hackmd.io/NTvpX391SfWBnJa0VF9UAQ/badge)](https://hackmd.io/NTvpX391SfWBnJa0VF9UAQ)
+
+
+
 
 ## 2022-08-05 
  in meeting - Jon, Trent, Kiley, Aaron
