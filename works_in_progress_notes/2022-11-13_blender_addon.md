@@ -11,7 +11,7 @@
 TO DO 
 - [ ] auto-download sample data
 - [x] why skelly face down? 
-    - b/c he swaps XYZ -> -XZ-Y in the `body, hand, face _processing.py` files
+    its bc he swaps XYZ -> -XZ-Y in the `body, hand, face _processing.py` files
 - [-] don't load live
     - can replace`load_freemocap` with better version (the existing one hijacks the `holistic` processor, and that's not necessary)
 - [ ] load body hands and face separately
