@@ -10,7 +10,7 @@
 > ---
 > Freemocap Materials -
 > 
-> As requested, I'm attaching an 'executive summary' document that outlines the basic mission of the FreeMoCap project. This was the front page of the Epic MegaGrant we submitted in January, so it's slightly out of date (esp the roadmap on page 2) but the general vibe of the text on page 1 is still aligned with our current work.
+> As requested, I'm attaching an 'executive summary' document that outlines the basic mission of the FreeMoCap project. [This was the front page of the Epic MegaGrant we submitted in January](https://docs.google.com/document/d/1vjeWHbORkfCzLxIlLJG7HXwrhk5i-JQ15dS-Td2dcgQ/edit?usp=sharing), so it's slightly out of date (esp the roadmap on page 2) but the general vibe of the text on page 1 is still aligned with our current work.
 > 
 > That write up was paired with this short video that provides a demo of an animation made with the freemocap software (specifically made by someone  with little-to-no animation experience, aka myself 😅) - https://youtu.be/WW_WpMcbzns
 > 
