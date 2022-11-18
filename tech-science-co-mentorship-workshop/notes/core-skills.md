@@ -1,5 +1,8 @@
 # Tech - Science co-mentorship workshop - core skills
 
+[![hackmd-github-sync-badge](https://hackmd.io/3OCYKvJsTQGVhzWJXVIBSw/badge)](https://hackmd.io/3OCYKvJsTQGVhzWJXVIBSw)
+
+
 - Code (Python)
     - PEP 8 guidelines
     - Type hints
