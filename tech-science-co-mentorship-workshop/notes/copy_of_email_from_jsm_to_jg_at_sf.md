@@ -1,5 +1,8 @@
 # email to JG at SF outline rough cut idea for FreeMoCamp
 
+[![hackmd-github-sync-badge](https://hackmd.io/ZN4g57A0RmG0dc687XI1DQ/badge)](https://hackmd.io/ZN4g57A0RmG0dc687XI1DQ)
+
+
 > Hi [J], thanks again for the really fun conversation last week! The resources you shared were incredibly helpful!
 > 
 > Below are some follow ups from our conversation:
